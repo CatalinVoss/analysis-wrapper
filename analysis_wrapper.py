@@ -66,7 +66,7 @@ class AnalysisContext:
         if self.save_output:
             self.logger = Logger(os.path.join(self.output_path, "out.log"))
 
-    def save_fig(self, fig, name, extension=".png"):
+    def save_fig(self, fig, name, extension=".pdf"):
         fig.tight_layout()
         fname = str(name).replace(' ', '_')+extension
         fig.savefig(os.path.join(self.output_path, fname))
